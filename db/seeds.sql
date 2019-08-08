@@ -1,6 +1,6 @@
-INSERT INTO burgers (burger) VALUES ('Cheeseburger', 0);
-INSERT INTO burgers (burger) VALUES ('Veggie Burger', 0);
-INSERT INTO burgers (burger) VALUES ('Bison Burger', 0);
-INSERT INTO burgers (burger) VALUES ('Angus Burger', 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cheeseburger', 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Veggie Burger', 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Bison Burger', 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Angus Burger', 0);
 
 
