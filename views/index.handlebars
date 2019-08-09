@@ -1,9 +1,21 @@
 <h1> Burgers</h1>
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+        {{/unless}}
+    {{/each}}
+</ul>
 
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+        {{/if}}
+    {{/each}}
+</ul>
 <form id="burgerForm">
     <div class="form-group">
         <label for="burgerName">Name of Burger:</label>
         <input type="text" id="burgerName" name="burger_name">
     </div>
-      <button type="submit" id="submit">Add Cat</button>
+    <button type="submit" id="submit">Add Cat</button>
 </form>
