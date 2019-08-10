@@ -13,4 +13,6 @@ The newly created burger now also has an associated button. This button invites 
 
 Once the "Devoured" burger has been updated and rendered at the bottom of the page, a new button appears. This button offers the user a chance to "Delete" the burger. If the user chooses to delete the burger, the burger is removed from the front-end and disappears from view. It is also deleted from the database. 
 
+![MySQLBurger](/public/assets/images/mySQLBurgerDelete.png)
+
 This application follows an MVC design pattern and is built with **MySQL**, **Node**, **Express**, **Handlebars** and a homemade **ORM**.
