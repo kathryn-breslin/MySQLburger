@@ -1,55 +1,91 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Eat-Da-Burger</a>
+    <form id="burgerForm" class="form-inline">
+        <input class="form-control mr-sm-2" type="text" id="burgerName" name="burger_name" placeholder="Add Burger">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="add">Add</button>
+    </form>
+    {{!-- <form id="burgerForm">
+            <div class="form-group">
+                <label for="burgerName">Name of Burger:</label>
+                <input type="text" id="burgerName" name="burger_name">
+            </div>
+            <button type="submit" type="button" class="btn btn-dark" id="submit">Add Burger</button>
+        </form> --}}
+</nav>
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1>Eat-Da-Burger</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2"></div>
+    <div class="row" id="top">
+        <div class="col-1"></div>
         <div class="col-10">
             <div class="row">
                 {{#each burgers}}
                 {{#unless this.devoured}}
-                <div class="col-4 burgerStructure">
-                    <p>{{this.id}} - {{this.burger_name}}</p>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.id}} - {{this.burger_name}}</h5>
+                            {{!-- <input class="change-devour" type="hidden" class="change-devour" type="text" value={{this.id}}><br>
+                            <button type="submit" type="button"
+                                class="btn btn-outline-dark btn-sm">Devour the
+                                {{this.burger_name}}</button> --}}
+                        </div>
+                    </div>
                 </div>
-                <div class="col-8 burgerStructure">
-                    <form class="devourButton button-size">
-                        <input input type="hidden" class="change-devour" type="text" value={{this.id}}><br>
-                        <button type="submit" type="button" class="btn btn-outline-dark">Devour the
+                <div class="col-4">
+                    <form class="devourButton">
+                        <input type="hidden" class="change-devour" type="text" value={{this.id}}><br>
+                        <button type="submit" class="btn btn-outline-dark btn-sm">Devour the
                             {{this.burger_name}}</button>
                     </form>
                 </div>
+                {{!-- <div class="col-1"></div>
+                <div class="col-5 burgerStructure">
+                    <p>{{this.id}} - {{this.burger_name}}</p>
+                </div> --}}
+                {{!-- <div class="col-5 burgerStructure">
+                    <form class="devourButton button-size">
+                        <input input type="hidden" class="change-devour" type="text" value={{this.id}}><br>
+                        <button type="submit" type="button" class="btn btn-outline-dark btn-sm">Devour the
+                            {{this.burger_name}}</button>
+                    </form>
+                </div>
+                <div class="col-1"></div> --}}
                 {{/unless}}
                 {{/each}}
             </div>
         </div>
-        <div class="col-2"></div>
+        <div class="col-1"></div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            <form id="burgerForm">
-                <div class="form-group">
-                    <label for="burgerName">Name of Burger:</label>
-                    <input type="text" id="burgerName" name="burger_name">
+        <div class="col-12" id="middle"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" id="bottom">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="row">
+                {{#each burgers}}
+                {{#if this.devoured}}
+                <div class="col-1"></div>
+                <div class="col-5 burgerStructure">
+                    <p>{{this.id}} - {{this.burger_name}}</p>
                 </div>
-                <button type="submit" type="button" class="btn btn-dark" id="submit">Add Burger</button>
-            </form>
+                <div class="col-5 burgerStructure">
+                    <form class="deleteButton button-size">
+                        <input input type="hidden" class="delete" type="text" value={{this.id}}><br>
+                        <button type="submit" type="button" class="btn btn-outline-dark btn-sm">Delete the
+                            {{this.burger_name}}</button>
+                    </form>
+                </div>
+                <div class="col-1"></div>
+                {{/if}}
+                {{/each}}
+            </div>
         </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-            {{#each burgers}}
-            {{#if this.devoured}}
-            <p>{{this.id}} - {{this.burger_name}}</p>
-            {{/if}}
-            {{/each}}
-        </div>
+        <div class="col-1"></div>
     </div>
 </div>

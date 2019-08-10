@@ -1,11 +1,25 @@
-.burgerStructure {
+body {
+    background-image: url("../images/wood.jpg");
+    height: 100%;
+    background-size: cover;
+}
+.card {
     border: solid black 1px;
     margin: auto;
 }
 
-.burgerStructure button {
+/* .burgerStructure button {
     margin: auto;
-}
+} */
 .devourButton {
     float: left;
+}
+
+#middle {
+    background-color: blue;
+    height: 20px;
+}
+
+#top, #middle, #bottom {
+    margin-top: 40px;
 }
