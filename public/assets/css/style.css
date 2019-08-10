@@ -1,7 +1,11 @@
 .burgerStructure {
     border: solid black 1px;
+    margin: auto;
 }
 
+.burgerStructure button {
+    margin: auto;
+}
 .devourButton {
     float: left;
 }

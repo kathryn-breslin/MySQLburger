@@ -3,30 +3,28 @@
         <div class="col-12">
             <h1>Eat-Da-Burger</h1>
         </div>
-        <div class="col-6">
-            <div class="row" class="burgerStructure">
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+            <div class="row">
                 {{#each burgers}}
                 {{#unless this.devoured}}
-                <div class="col-9">
+                <div class="col-4 burgerStructure">
                     <p>{{this.id}} - {{this.burger_name}}</p>
                 </div>
-                <div class="col-3">
+                <div class="col-8 burgerStructure">
                     <form class="devourButton button-size">
                         <input input type="hidden" class="change-devour" type="text" value={{this.id}}><br>
-                        <button type="submit" type="button" class="btn btn-dark">Devour it!</button>
+                        <button type="submit" type="button" class="btn btn-outline-dark">Devour the
+                            {{this.burger_name}}</button>
                     </form>
                 </div>
                 {{/unless}}
                 {{/each}}
             </div>
         </div>
-        <div class="col-6">
-            {{#each burgers}}
-            {{#if this.devoured}}
-            <p>{{this.id}} - {{this.burger_name}}</p>
-            {{/if}}
-            {{/each}}
-        </div>
+        <div class="col-2"></div>
     </div>
 </div>
 
@@ -40,6 +38,18 @@
                 </div>
                 <button type="submit" type="button" class="btn btn-dark" id="submit">Add Burger</button>
             </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <p>{{this.id}} - {{this.burger_name}}</p>
+            {{/if}}
+            {{/each}}
         </div>
     </div>
 </div>
