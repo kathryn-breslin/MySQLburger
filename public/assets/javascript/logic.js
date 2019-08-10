@@ -16,7 +16,7 @@ $(function() {
     });
   });
 
-  $(".devourButton").on("#submit", function(event) {
+  $(".devourButton").on("submit", function(event) {
       event.preventDefault();
     var id = $(this).children('.change-devour').val();
     console.log("This is the id of the burger: " + id)

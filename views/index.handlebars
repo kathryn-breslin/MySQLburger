@@ -23,19 +23,13 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">{{this.id}} - {{this.burger_name}}</h5>
-                            {{!-- <input class="change-devour" type="hidden" class="change-devour" type="text" value={{this.id}}><br>
-                            <button type="submit" type="button"
-                                class="btn btn-outline-dark btn-sm">Devour the
-                                {{this.burger_name}}</button> --}}
+                            <form class="devourButton button-size">
+                                <input type="hidden" class="change-devour" type="text" value={{this.id}}><br>
+                                <button type="submit" type="button" class="btn btn-outline-dark btn-sm">Devour the
+                                    {{this.burger_name}}</button>
+                            </form>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <form class="devourButton">
-                        <input type="hidden" class="change-devour" type="text" value={{this.id}}><br>
-                        <button type="submit" class="btn btn-outline-dark btn-sm">Devour the
-                            {{this.burger_name}}</button>
-                    </form>
                 </div>
                 {{!-- <div class="col-1"></div>
                 <div class="col-5 burgerStructure">
@@ -70,18 +64,18 @@
             <div class="row">
                 {{#each burgers}}
                 {{#if this.devoured}}
-                <div class="col-1"></div>
-                <div class="col-5 burgerStructure">
-                    <p>{{this.id}} - {{this.burger_name}}</p>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.id}} - {{this.burger_name}}</h5>
+                            <form class="deleteButton button-size">
+                                <input input type="hidden" class="delete" type="text" value={{this.id}}><br>
+                                <button type="submit" type="button" class="btn btn-outline-dark btn-sm">Delete the
+                                    {{this.burger_name}}</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-5 burgerStructure">
-                    <form class="deleteButton button-size">
-                        <input input type="hidden" class="delete" type="text" value={{this.id}}><br>
-                        <button type="submit" type="button" class="btn btn-outline-dark btn-sm">Delete the
-                            {{this.burger_name}}</button>
-                    </form>
-                </div>
-                <div class="col-1"></div>
                 {{/if}}
                 {{/each}}
             </div>
