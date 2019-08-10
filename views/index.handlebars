@@ -22,10 +22,10 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">{{this.id}} - {{this.burger_name}}</h5>
+                            <h5 class="card-title">{{this.burger_name}}</h5>
                             <form class="devourButton button-size">
                                 <input type="hidden" class="change-devour" type="text" value={{this.id}}><br>
-                                <button type="submit" type="button" class="btn btn-outline-dark btn-sm">Devour the
+                                <button type="submit" type="button" class="btn btn-outline-success">Devour the
                                     {{this.burger_name}}</button>
                             </form>
                         </div>
@@ -52,8 +52,10 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-12" id="middle"></div>
+    <div class="row" id="middleBanner">
+        <div class="col-12" id="middle">
+
+        </div>
     </div>
 </div>
 
@@ -67,10 +69,10 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">{{this.id}} - {{this.burger_name}}</h5>
+                            <h5 class="card-title">{{this.burger_name}}</h5>
                             <form class="deleteButton button-size">
                                 <input input type="hidden" class="delete" type="text" value={{this.id}}><br>
-                                <button type="submit" type="button" class="btn btn-outline-dark btn-sm">Delete the
+                                <button type="submit" type="button" class="btn btn-outline-danger">Delete the
                                     {{this.burger_name}}</button>
                             </form>
                         </div>
