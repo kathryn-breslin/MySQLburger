@@ -20,7 +20,6 @@ $(function() {
       event.preventDefault();
     var id = $(this).children('.change-devour').val();
     console.log("This is the id of the burger: " + id)
-    // var newDevoured = $(this).data("newDevour");
     console.log("Burger has been clicked")
     var newDevouredState = {
       devoured: id
