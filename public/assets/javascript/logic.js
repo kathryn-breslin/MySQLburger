@@ -16,19 +16,21 @@ $(function() {
     });
   });
 
-  $(".change-devour").on("submit", function(event) {
-    var id = $(this).data("id");
-    var newDevoured = $(this).data("newDevour");
+  $(".devourButton").on("submit", function(event) {
+      event.preventDefault();
+    var id = $(this).children('.change-devour').val();
+    console.log("This is the id of the burger: " + id)
+    // var newDevoured = $(this).data("newDevour");
     console.log("Burger has been clicked")
     var newDevouredState = {
-      devoured: newDevoured
+      devoured: id
     };
 
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newDevouredState
     }).then(function() {
-        console.log("Burger has been: " + newDevoured)
+        console.log("Burger has been: " + newDevouredState)
         location.reload();
     })
   });
