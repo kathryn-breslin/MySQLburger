@@ -33,4 +33,17 @@ $(function() {
         location.reload();
     })
   });
+
+  $('.deleteButton').on('submit', function(event) {
+    event.preventDefault();
+    var id = $(this).children('.delete').val();
+
+    $.ajax('/api/burgers/' + id, {
+      type: "DELETE"
+    }).then(function(){
+      console.log("Deleting burger with id of: " + id);
+      location.reload();
+    })
+
+  })
 });
